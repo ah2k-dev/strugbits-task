@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseURL = "http://192.168.0.196:8001";
+export const baseURL = "https://reqres.in/api/users?page=1";
 
 const custAxios = axios.create({
   baseURL: baseURL,

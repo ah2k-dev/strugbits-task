@@ -87,6 +87,60 @@ export const customerReducer = (
           }),
         ],
       };
+    case customerConstants.SORT_LIST:
+      let localCustomers4 = localStorage.getItem("customers");
+      if (localCustomers4) {
+        const customers = JSON.parse(localCustomers4);
+        const sortedCustomers = customers.sort((a, b) => {
+          if (action.payload.sortType === "asc") {
+            if (a[action.payload.sortField] > b[action.payload.sortField]) {
+              return 1;
+            } else if (
+              a[action.payload.sortField] < b[action.payload.sortField]
+            ) {
+              return -1;
+            } else {
+              return 0;
+            }
+          } else {
+            if (a[action.payload.sortField] < b[action.payload.sortField]) {
+              return 1;
+            } else if (
+              a[action.payload.sortField] > b[action.payload.sortField]
+            ) {
+              return -1;
+            } else {
+              return 0;
+            }
+          }
+        });
+        localStorage.setItem("customers", JSON.stringify(sortedCustomers));
+      }
+      return {
+        ...state,
+        customers: [
+          ...state.customers.sort((a, b) => {
+            if (action.payload.sortType === "asc") {
+              if (a[action.payload.sortField] > b[action.payload.sortField]) {
+                return 1;
+              } else if (
+                a[action.payload.sortField] < b[action.payload.sortField]
+              ) {
+                return -1;
+              } else {
+                return 0;
+              }
+            }
+            if (a[action.payload.sortField] < b[action.payload.sortField]) {
+              return 1;
+            }
+            if (a[action.payload.sortField] > b[action.payload.sortField]) {
+              return -1;
+            }
+            return 0;
+          }),
+        ],
+      };
     default:
       return state;
   }

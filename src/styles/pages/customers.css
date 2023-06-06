@@ -1,6 +1,5 @@
 .customer-container {
   background: #f3f3f3;
-  /* width: 100%; */
   height: 100%;
   padding: 30px 50px;
   min-width: 800px;
@@ -24,7 +23,6 @@
 .table-head-item:hover {
   cursor: pointer;
   color: #02534a;
-
 }
 
 .customer-row {
@@ -57,45 +55,130 @@
 }
 
 .actions > button {
-    width: 120px;
+  width: 120px;
 }
 
 .edit-btn {
-    background: #B0E1B7;
-    border: none;
-    color: #02534a;
+  background: #b0e1b7;
+  border: none;
+  color: #02534a;
 }
 
 .edit-btn:hover {
-    color: #02534a !important;
+  color: #02534a !important;
 }
 
 .delete-btn {
-    background: #E1B0B0;
-    border: none;
-    color: #E34646;
+  background: #e1b0b0;
+  border: none;
+  color: #e34646;
 }
 
 .delete-btn:hover {
-    color: #E34646 !important;
+  color: #e34646 !important;
 }
 
-.new-customer{
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 20px;
+.new-customer {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
 
-.new-customer-btn{
-    background: linear-gradient(to right, #5AAE8D, #075547);
-    border: none;
-    color: #ffffff;
-    height: 50px;
-    width: 190px;
-    border-radius: 10px;
-    font-size: large;
+.new-customer-btn {
+  background: linear-gradient(to right, #5aae8d, #075547);
+  border: none;
+  color: #ffffff;
+  height: 50px;
+  width: 190px;
+  border-radius: 10px;
+  font-size: large;
 }
 
-.new-customer-btn:hover{
-    color: #FFF !important;
+.new-customer-btn:hover {
+  color: #fff !important;
+}
+
+.table-data {
+  min-height: 420px;
+}
+
+.add-modal-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  width: 100%;
+  background: linear-gradient(95deg, #5aae8d, #075547);
+  color: #ffffff;
+  border-radius: 8px;
+  /* border-top-right-radius: 8px; */
+  height: 130px;
+}
+
+.add-modal-top > span {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.add-modal-body {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 20px;
+}
+
+.delete-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  height: 350px;
+}
+
+.delete-modal-content > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.del-actions {
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center !important;
+  width: 70%;
+  flex-direction: row !important;
+}
+
+.del-actions > button {
+  width: 120px;
+}
+
+.cancel-btn {
+  background: #a5a5af;
+  border: none;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  color: #fff !important;
+}
+
+.del-btn {
+  background: #d80000;
+  border: none;
+  color: #fff;
+}
+
+.del-btn:hover {
+  color: #fff !important;
 }

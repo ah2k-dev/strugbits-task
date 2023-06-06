@@ -9,7 +9,7 @@ export const getCustomers = () => {
       const response = await custAxios.get("/");
       dispatch({
         type: customerConstants.GET_CUSTOMERS_API_SUCCESS,
-        payload: response.data,
+        payload: response.data.data,
       });
     } catch (error) {
       dispatch({
@@ -50,6 +50,15 @@ export const updateCustomer = (customer) => {
     dispatch({
       type: customerConstants.UPDATE_CUSTOMER,
       payload: customer,
+    });
+  };
+};
+
+export const sortList = (sortField, sortType) => {
+  return (dispatch) => {
+    dispatch({
+      type: customerConstants.SORT_LIST,
+      payload: { sortType, sortField },
     });
   };
 };

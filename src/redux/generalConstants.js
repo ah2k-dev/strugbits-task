@@ -6,4 +6,6 @@ export const customerConstants = {
     ADD_CUSTOMER: "ADD_CUSTOMER",
     DELETE_CUSTOMER: "DELETE_CUSTOMER",
     UPDATE_CUSTOMER: "UPDATE_CUSTOMER",
+
+    SORT_LIST: "SORT_LIST",
 }

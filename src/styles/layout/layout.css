@@ -12,6 +12,7 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   position: fixed;
+  z-index: 999;
 }
 
 .sidebar-container.open {
@@ -66,7 +67,7 @@
 
   .outlet-container {
     margin-left: 0;
-    padding-left: 80px;
+    padding-top: 50px;
   }
 
   .sidebar-container {
@@ -77,6 +78,7 @@
     transform: translateX(-100%);
     z-index: 999;
     transition: transform 0.3s ease;
+    height: 100%;
   }
 
   .sidebar-container.open {
